@@ -13,7 +13,6 @@ const props = defineProps({
             <p>{{ message.text }}</p>   
 
         </div>
-        <p>Chat component werkt!</p>
         <p>Aantal berichten: {{ props.messages.length }}</p>
     </div>
 </template>
