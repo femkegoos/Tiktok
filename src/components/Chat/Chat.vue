@@ -23,7 +23,7 @@ function addMessage(newMessage) {
 <template>
 <div>
     <chatmessages :messages="messages"/>
-    <chatForm />
+    <chatForm @message-submitted="addMessage" />
 </div>>
 </template>
 
