@@ -1,20 +1,11 @@
 <script setup>
-import { defineProps } from 'vue';
+import { ref } from 'vue';
 
-const props = defineProps({
-    messages: Array
-});
+const username = ref('');
 </script>
 <template>
     <div>
-        <h2>Comments</h2>
-        <div v-for="message in props.messages">
-            <p>{{ message.username }}</p>
-            <p>{{ message.text }}</p>   
-
-        </div>
-        <p>Chat component werkt!</p>
-        <p>Aantal berichten: {{ props.messages.length }}</p>
+        <input type="text" v-model="username" placeholder="Enter your username">
     </div>
 </template>
 
