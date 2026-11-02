@@ -3,7 +3,7 @@ import{ ref, defineProps, reactive, onMounted,} from 'vue';
 import chatmessages from './ChatMessages.vue';
 import chatForm from './ChatForm.vue';
 
-const messages = ref([]);
+const messages = reactive([]);
 
 
 //api https://chat-api-soulaimane.vercel.app/api/v1/messages
@@ -22,7 +22,7 @@ function addMessage(newMessage) {
 </script>
 <template>
 <div>
-    <chatmessages />
+    <chatmessages :messages="messages"/>
     <chatForm />
 </div>>
 </template>
