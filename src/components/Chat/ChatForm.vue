@@ -7,7 +7,7 @@ const message = ref('');
 
 function submitMessage() {
     const newMessage = {
-        username: username.value,
+        user: username.value,
         text: message.value
     };
 
