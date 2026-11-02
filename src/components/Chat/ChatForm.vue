@@ -23,6 +23,8 @@ function submitMessage() {
     .then(response => response.json())
     .then(data => {
        emit('message-submitted', data.data.message);
+       username.value = '';
+       message.value = '';
     });
 }
 </script>
