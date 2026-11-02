@@ -1,0 +1,7 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.tiktok{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
