@@ -9,7 +9,7 @@ const props = defineProps({
     <div>
         <h2>Comments</h2>
         <div v-for="message in props.messages">
-            <p>{{ message.username }}</p>
+            <p>{{ message.user || message.username }}</p>
             <p>{{ message.text }}</p>   
 
         </div>
