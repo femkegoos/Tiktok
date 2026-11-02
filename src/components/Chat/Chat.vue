@@ -11,9 +11,14 @@ onMounted(() => {
   fetch('https://chat-api-soulaimane.vercel.app/api/v1/messages')
     .then(response => response.json())
     .then(data => {
-      messages.value = data.data.messages[0].text;
-    })
+      for (let i = 0; i < data.data.messages.length; i++) {
+        messages.push(data.data.messages[i]);
+      }
+        })
 }); 
+function addMessage(newMessage) {
+  messages.unshift(newMessage);
+}
 </script>
 <template>
 <div>
