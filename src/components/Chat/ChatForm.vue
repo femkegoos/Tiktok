@@ -3,6 +3,7 @@ import { ref } from 'vue';
 
 const username = ref('');
 const message = ref('');
+const emit = defineEmits(['message-submitted']);
 
 
 function submitMessage() {
@@ -18,6 +19,10 @@ function submitMessage() {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(newMessage)
+    })
+    .then(response => response.json())
+    .then(data => {
+       emit('message-submitted', data.data.message);
     });
 }
 </script>
