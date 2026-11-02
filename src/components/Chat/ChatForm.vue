@@ -13,6 +13,7 @@ const message = ref('');
     <div>
     <textarea v-model="message" placeholder="Enter your comment..."></textarea>
     </div>
+    <button type="submit">Send comment</button>
 </template>
 
 <style scoped></style>
