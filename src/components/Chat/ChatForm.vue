@@ -4,13 +4,18 @@ import { ref } from 'vue';
 const username = ref('');
 const message = ref('');
 
+
 function submitMessage() {
-    console.log(username.value);
-    console.log(message.value);
+    const newMessage = {
+        username: username.value,
+        text: message.value
+    };
+
+    console.log(newMessage);
 }
 </script>
 <template>
-    <form @submit.prevent>
+    <form @submit.prevent="submitMessage">
     <div>
         <input type="text" v-model="username" placeholder="Enter your username">
     </div>
