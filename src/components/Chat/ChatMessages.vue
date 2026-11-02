@@ -1,16 +1,21 @@
 <script setup>
-import { ref, defineProps, reactive, onMounted, } from 'vue';
+import { defineProps } from 'vue';
 
-defineProps({
-    messages:Array
+const props = defineProps({
+    messages: Array
 });
-for (let i = 0; i < messages.length; i++) {
-    console.log(messages[i].text);
-}
-
 </script>
 <template>
-    <div> chatmessages.vue</div>
+    <div>
+        <h2>Comments</h2>
+        <div v-for="message in props.messages">
+            <p>{{ message.username }}</p>
+            <p>{{ message.text }}</p>   
+
+        </div>
+        <p>Chat component werkt!</p>
+        <p>Aantal berichten: {{ props.messages.length }}</p>
+    </div>
 </template>
 
 <style scoped></style>
