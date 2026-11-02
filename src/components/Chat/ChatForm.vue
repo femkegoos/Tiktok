@@ -3,9 +3,14 @@ import { ref } from 'vue';
 
 const username = ref('');
 const message = ref('');
+
+function submitMessage() {
+    console.log(username.value);
+    console.log(message.value);
+}
 </script>
 <template>
-    <form>
+    <form @submit.prevent>
     <div>
         <input type="text" v-model="username" placeholder="Enter your username">
     </div>
