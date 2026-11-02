@@ -1,5 +1,5 @@
 <script setup>
-import{ ref, defineProps, reactive, onMounted,} from 'vue';
+import{ reactive, onMounted,} from 'vue';
 import chatmessages from './ChatMessages.vue';
 import chatForm from './ChatForm.vue';
 
