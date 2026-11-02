@@ -13,7 +13,11 @@ function submitMessage() {
 
     console.log(newMessage);
     fetch('https://chat-api-soulaimane.vercel.app/api/v1/messages', {
-        method: 'POST'
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newMessage)
     });
 }
 </script>
