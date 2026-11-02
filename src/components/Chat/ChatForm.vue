@@ -12,6 +12,9 @@ function submitMessage() {
     };
 
     console.log(newMessage);
+    fetch('https://chat-api-soulaimane.vercel.app/api/v1/messages', {
+        method: 'POST'
+    });
 }
 </script>
 <template>
